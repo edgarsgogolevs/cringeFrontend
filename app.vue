@@ -1,6 +1,5 @@
 <template>
   <div>
-    <input type="text" class="form-control">
-    <!-- <NuxtWelcome /> -->
+    <NuxtPage />
   </div>
 </template>
