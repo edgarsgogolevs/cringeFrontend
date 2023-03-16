@@ -1,6 +1,9 @@
 <template>
   <div class="py-3 backdrop-class">
-    <div class="container">
+    <h1>{{ data }}</h1>
+    <h1>{{ pending }}</h1>
+    <button @click="refresh" class="btn btn-info">Poga</button>
+    <!-- <div class="container">
       <div class="row justify-content-center mt-5">
         <div class="col-lg-4 col-md-6 col-sm-6">
           <div class="card shadow">
@@ -35,19 +38,28 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 
 <script setup>
+const runtimeConfig = useRuntimeConfig();
+
 const { $api } = useNuxtApp();
-const msg = await $api.get("/");
+const {data, pending, refresh} = await useAsyncData("message", async () => {
+  r = await $api.get("/")
+  const ret = await r.data;
+  console.log(ret)
+  return ret;
+})
+// const msg = await $api.get("/");
+// console.log(msg);
 </script>
 
 <style scoped>
-.backdrop-class {
+/* .backdrop-class {
   background-image: url("~/assets/img/background_login.jpg");
   background-size: cover;
   height: 100vh;
-}
+} */
 </style>
