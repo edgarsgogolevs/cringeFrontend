@@ -4,4 +4,7 @@ Auth CSS
   .auth-button {
     background: #3a2014;
   }
+  .poster-small {
+    max-height: 180px;
+  }
   

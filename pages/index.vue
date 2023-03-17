@@ -1,7 +1,7 @@
 <template>
   <div class="py-3 backdrop-class">
     <div class="container">
-      <div class="row justify-content-center mt-5">
+      <div class="row justify-content-center mt-4">
         <div class="col-lg-4 col-md-6 col-sm-6">
           <div class="card shadow">
             <div class="card-title text-center border-bottom">
@@ -40,13 +40,14 @@
 </template>
 
 <script setup>
-const { $api } = useNuxtApp();
-const msg = await $api.get("/");
+definePageMeta({
+  layout: false,
+});
 </script>
 
 <style scoped>
 .backdrop-class {
-  background-image: url("~/assets/img/background_login.jpg");
+  background-image: url("~/assets/img/background-auth.gif");
   background-size: cover;
   height: 100vh;
 }

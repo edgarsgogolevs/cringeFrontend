@@ -28,9 +28,16 @@
         </div>
     </div>
 </template>
+
+<script setup>
+definePageMeta({
+  layout: false,
+});
+</script>
+
 <style scoped>
  .backdrop-class  {
-    background-image: url('~/assets/img/background_login.jpg');
+    background-image: url('~/assets/img/background-auth.gif');
     background-size: cover;
     height: 100vh;
   }
