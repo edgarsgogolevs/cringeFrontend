@@ -1,9 +1,6 @@
 <template>
   <div class="py-3 backdrop-class">
-    <h1>{{ data }}</h1>
-    <h1>{{ pending }}</h1>
-    <button @click="refresh" class="btn btn-info">Poga</button>
-    <!-- <div class="container">
+    <div class="container">
       <div class="row justify-content-center mt-5">
         <div class="col-lg-4 col-md-6 col-sm-6">
           <div class="card shadow">
@@ -38,8 +35,11 @@
           </div>
         </div>
       </div>
-    </div> -->
+    </div>
   </div>
+  <h1>{{ data }}</h1>
+    <h1>{{ pending }}</h1>
+    <button @click="refresh" class="btn btn-info">Poga</button>
 </template>
 
 <script setup>
@@ -61,9 +61,9 @@ const {data, pending, refresh} = await useAsyncData("message", async () => {
 </script>
 
 <style scoped>
-/* .backdrop-class {
-  background-image: url("~/assets/img/background_login.jpg");
+.backdrop-class {
+  background-image: url("~/assets/img/background-auth.gif");
   background-size: cover;
   height: 100vh;
-} */
+}
 </style>
