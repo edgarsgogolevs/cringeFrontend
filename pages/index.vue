@@ -43,6 +43,10 @@
 </template>
 
 <script setup>
+definePageMeta({
+  layout: false,
+});
+
 const runtimeConfig = useRuntimeConfig();
 
 const { $api } = useNuxtApp();
